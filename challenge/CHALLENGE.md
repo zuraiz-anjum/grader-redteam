@@ -1,0 +1,5 @@
+# Break my verifier
+
+The task is small on purpose: write `solution.py` with a function `solve(nums)` that returns the sum of a list of integers. The grader is [`grader.py`](grader.py), the hardened grader from this repo. Your goal is to submit a `solution.py` that makes it award a reward of 1 without actually solving the task. Hardcoding answers, forging output, planting reward files, tampering with the tests, hanging or crashing it, anything goes, as long as the grader is run the normal way and the reward it writes says 1.
+
+To try it locally, install the tool (`pip install -e .` from the repo root) and run `grader-redteam run challenge/challenge.toml` to see the stock exploits get caught. Then drop your file into a copy of `challenge/task/workspace` and run `python challenge/grader.py <workspace> <reward.json>` yourself. If you get a 1 for something that is not a sum, [submit it here](https://github.com/zuraiz-anjum/grader-redteam/issues/new?template=exploit.yml). Accepted exploits are listed in [EXPLOITS.md](EXPLOITS.md) and fixed in the grader.

@@ -1,5 +1,7 @@
 # grader-redteam
 
+[![challenge](https://github.com/zuraiz-anjum/grader-redteam/actions/workflows/challenge.yml/badge.svg)](https://github.com/zuraiz-anjum/grader-redteam/actions/workflows/challenge.yml)
+
 Why I built this: [How models cheat graders, and how to build graders that hold](docs/how-models-cheat-graders.md)
 
 A grader is the part of an evaluation that decides whether a model did the
@@ -10,6 +12,10 @@ numbers stop meaning anything.
 generic exploits against any grader that writes a reward file, and tells you
 which ones got through. Standard library only on Python 3.11+ (3.10 also
 needs `tomli`).
+
+## Break my verifier
+
+Think the hardened grader can be fooled? The [challenge](challenge/CHALLENGE.md) gives you the task and the grader. Make it award 1 without solving the task and [submit the exploit](https://github.com/zuraiz-anjum/grader-redteam/issues/new?template=exploit.yml).
 
 ## Quick start
 
