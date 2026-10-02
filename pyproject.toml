@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grader-redteam"
+version = "0.1.0"
+description = "Run generic exploit probes against an evaluation grader and see what it misses."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Zuraiz Anjum" }]
+requires-python = ">=3.10"
+dependencies = ['tomli>=1.1; python_version < "3.11"']
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+grader-redteam = "grader_redteam.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

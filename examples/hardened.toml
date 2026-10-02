@@ -1,0 +1,20 @@
+[grader]
+command = ["{python}", "hardened_grader.py", "{workspace}", "{reward}"]
+timeout = 15
+
+[workspace]
+template = "task/workspace"
+deliverable = "solution.py"
+reward = "{private}/reward.json"   # outside the workspace
+planted_reward = "reward.json"     # where the candidate tries to plant one
+protected = ["tests/cases.json", "tests/expected.json"]
+secrets = []
+
+[candidate]
+sandbox_user = ""
+timeout = 2
+
+[controls]
+reference = "task/reference_solution.py"
+alternates = ["task/alt_solution.py"]
+negatives = ["task/hardcoded_visible.py"]

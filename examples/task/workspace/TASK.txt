@@ -1,0 +1,2 @@
+Write solution.py with a function solve(nums) that returns the sum of
+a list of integers. Visible examples live in tests/.

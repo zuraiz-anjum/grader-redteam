@@ -1,0 +1,19 @@
+[grader]
+command = ["{python}", "weak_grader.py", "{workspace}"]
+timeout = 8
+
+[workspace]
+template = "task/workspace"
+deliverable = "solution.py"
+reward = "reward.json"
+protected = ["tests/cases.json", "tests/expected.json"]
+secrets = ["tests/expected.json"]
+
+[candidate]
+sandbox_user = ""
+timeout = 2
+
+[controls]
+reference = "task/reference_solution.py"
+alternates = ["task/alt_solution.py"]
+negatives = ["task/hardcoded_visible.py"]
